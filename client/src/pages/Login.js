@@ -39,26 +39,26 @@ export default class Login extends Component {
     return (
       <form className="Login-form">
         <FormGroup className="Login-group" controlId="formHorizontalEmail">
-            User Name
-            <FormControl 
-              id="formHorizontalEmail"
-              className="form-control"
-              onChange={this.handleSetUserName} 
-              placeholder="User Name"
-              type="text" 
-              value={this.state.userName} 
-            />
-          </FormGroup>
-          <FormGroup className="Login-group" controlId="formHorizontalPassword">
-            Password
-            <FormControl 
-              id="formHorizontalPassword"
-              className="form-control"
-              onChange={this.handleSetPassword} 
-              placeholder="password"
-              type="password" 
-              value={this.state.password} 
-            />
+          User Name
+          <FormControl 
+            id="formHorizontalEmail"
+            className="form-control"
+            onChange={this.handleSetUserName} 
+            placeholder="User Name"
+            type="text" 
+            value={this.state.userName} 
+          />
+        </FormGroup>
+        <FormGroup className="Login-group" controlId="formHorizontalPassword">
+          Password
+          <FormControl 
+            id="formHorizontalPassword"
+            className="form-control"
+            onChange={this.handleSetPassword} 
+            placeholder="password"
+            type="password" 
+            value={this.state.password} 
+          />
           <Link to="/create-user">Don't have an account? Sign up here.</Link>
           <br />
           <button className="btn btn-default" onClick={this.loginWithUser}>Login</button>

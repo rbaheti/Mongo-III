@@ -27,9 +27,9 @@ export default class SingleBlogPost extends Component {
 
   getBlogPost(){
     const { id } = this.props.match.params
-    console.log(id);
     axios.get(`http://localhost:3030/posts/${id}`)
       .then((data) => {
+        // console.log("data: " + JSON.stringify(data))
         this.setState({post: data.data});
       })
       .catch((err) => {
@@ -40,7 +40,7 @@ export default class SingleBlogPost extends Component {
   addComment(e) {
     e.preventDefault();
     const { comment } = this.state;
-    const { id } = this.props.match.params    
+    const { id } = this.props.match.params;
     const newComment = {
       text: comment,
       author: localStorage.getItem('uuID'),
