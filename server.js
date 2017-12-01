@@ -2,6 +2,9 @@ const bodyParser = require('body-parser');
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+
+const routes = require('./api/routes/routes');
+
 const port = process.env.PORT || 3030;
 const server  = express();
 
@@ -26,7 +29,6 @@ server.use((req, res, next) => {
     next();
 });
 
-const routes = require('./api/routes/routes');
 routes(server);
 
 server.listen(port, () => {
